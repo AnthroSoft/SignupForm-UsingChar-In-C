@@ -9,8 +9,8 @@ int main()
 
         printf("Do You want to create an Account [y/n] ");
         scanf(" %c", &check1);
-        if (check1 == 'n')
-            break;
+        if (check1 != 'y')
+            goto end;
 
         printf("You have to input user-name with 5 letters.\nEnter first alphabet: ");
         scanf(" %c", &us1);
@@ -147,6 +147,8 @@ int main()
                 printf("\nThe password is Incorrect.\nThe procedure for entering password will be repeated\n");
         } while (flag == 0);
 
-        printf("\nWelcome %c%c%c%c%c, you are now logged in", us1, us2, us3, us4, us5);
+        printf("\nSuccessfully Logged, Welcome %c%c%c%c%c", us1, us2, us3, us4, us5);
+    end:
+        break;
     }
 }
